@@ -33,6 +33,7 @@ You can install the required libraries using the following command:
 2. Run the `parcer.py` script to scrape product data and generate the `result.json` file.
 3. Run the `main.py` script to start the FastAPI server.`uvicorn main:app --reload`
 4. Access the API endpoints to retrieve product data.
+5. Use 127.0.0.1/docs to work with endpoints
 
 ## API Endpoints
 
