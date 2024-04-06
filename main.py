@@ -16,21 +16,21 @@ class CustomJSONResponse(JSONResponse):
 
 
 @app.get('/')
-def all_prods():
+async def all_prods():
     with open('result.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
     return data
 
 
 @app.get('/{name}')
-def prod(name):
+async def prod(name):
     with open('result.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
         return data[name]
 
 
 @app.get('/{name}/{key}')
-def prod_value(name, value):
+async def prod_value(name, value):
     with open('result.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
         return data[name][value]
